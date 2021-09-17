@@ -5,7 +5,7 @@
 Convert mg/m3 to ppm
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Converts a concentration in milligrams per cubic meter --> parts per million
 }
 \usage{
 mgm3.to.ppm(mg.per.cubic.meter, molecular.weight)
@@ -13,10 +13,10 @@ mgm3.to.ppm(mg.per.cubic.meter, molecular.weight)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{mg.per.cubic.meter}{
-%%     ~~Describe \code{mg.per.cubic.meter} here~~
+milligrams per cubic meter
 }
   \item{molecular.weight}{
-%%     ~~Describe \code{molecular.weight} here~~
+molecular weight
 }
 }
 \details{
@@ -45,14 +45,11 @@ mgm3.to.ppm(mg.per.cubic.meter, molecular.weight)
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (mg.per.cubic.meter, molecular.weight)
-{
-    ppm <<- mg.per.cubic.meter * 24.45/molecular.weigth
+## Using acrylamide
+## mgm3.to.ppm(10 ,78)
+## concentration of acyrlamide is 10 mg/m3
+## molecular weight of acrylamide is 78 grams/mol
+## "mg/m3: 9.99"
   }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

@@ -13,10 +13,11 @@ min.air.volume(limit.of.quantification.mg, contaminant.target.concentration.mgm3
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{limit.of.quantification.mg}{
-%%     ~~Describe \code{limit.of.quantification.mg} here~~
+the smallest amount or the lowest concentration of a substance that is possible to be determined
+by means of a given analytical procedure with the established accuracy, precision, and uncertainty
 }
   \item{contaminant.target.concentration.mgm3}{
-%%     ~~Describe \code{contaminant.target.concentration.mgm3} here~~
+an estimate of the airborne concentrations of the contaminant being tested.
 }
 }
 \details{
@@ -45,15 +46,10 @@ min.air.volume(limit.of.quantification.mg, contaminant.target.concentration.mgm3
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (limit.of.quantification.mg, contaminant.target.concentration.mgm3)
-{
-    volume.minimum <<- 1000 * limit.of.quantification.mg/contaminant.target.concentration.mgm3
-  }
+## min.air.volume(0.0027, 500)
+## a 0.0027 mg/m3 limit of quantification (concentration) exists for acetone
+## we are interested in a target concentration of 500 mg/m3
+"Minimum air volume required: 0.0054 liters"
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):

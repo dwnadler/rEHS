@@ -3,10 +3,10 @@ Type: Package
 Title: A set of tools for EHS management
 Version: 0.1.0
 Author: David Nadler
-Maintainer:  David Nadler <dnadler@nyit.edu>
+Maintainer: David Nadler <dnadler@nyit.edu>
 Description: add this section
     Use four spaces when indenting paragraphs within the Description.
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2

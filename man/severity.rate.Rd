@@ -2,21 +2,23 @@
 \alias{severity.rate}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Severity Rate Calculator
+Severity rate
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+a mathematical calculation that describes the number of lost days
+experienced as compared to the number of incidents experienced
 }
 \usage{
-severity.rate(total.days.lost, total.hours.worked)
+severity.rate(total.days.lost, total.recordable.incidents)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{total.days.lost}{
-%%     ~~Describe \code{total.days.lost} here~~
+total number of work days lost due to injury and illness. number of days lost
+do not need to be consecutive
 }
-  \item{total.hours.worked}{
-%%     ~~Describe \code{total.hours.worked} here~~
+  \item{total.recordable.incidents}{
+total number of recordable incidents that happened in a reporting period
 }
 }
 \details{
@@ -45,15 +47,10 @@ severity.rate(total.days.lost, total.hours.worked)
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (total.days.lost, total.hours.worked)
-{
-    total.days.lost * 2e+05/total.hours.worked
-  }
+## severity.rate(5, 2)
+## 5 work days were lost from 2 recordable incidents
+## "Severity rate: 2.50"
+## the average recordable incident resulted in 2.5 lost days
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):

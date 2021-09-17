@@ -2,10 +2,12 @@
 \alias{concentration}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Calculate New Concentration after a Time Interval
+Calculate new concentration after a time interval
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+When using dilution ventilation, the flow rate of fresh air is determined by (a) contaminant
+generation, (b) proper mixing, and (c) target final concentration. The methods used apply to
+uniform rates of generation and low to moderate toxicity. This function is used to determine the concentration buildup that will occur over a given period measured in minutes.
 }
 \usage{
 concentration(contaminant.generation.rate, flow.rate.cfm, timeframe, volume.cf)
@@ -13,16 +15,16 @@ concentration(contaminant.generation.rate, flow.rate.cfm, timeframe, volume.cf)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{contaminant.generation.rate}{
-%%     ~~Describe \code{contaminant.generation.rate} here~~
+the rate of contaminant released in cubic feet per minute (cfm)
 }
   \item{flow.rate.cfm}{
-%%     ~~Describe \code{flow.rate.cfm} here~~
+the rate of air flow in cubic feet per minute (cfm)
 }
   \item{timeframe}{
-%%     ~~Describe \code{timeframe} here~~
+the number of minutes (min) it takes to reach the new concentration
 }
   \item{volume.cf}{
-%%     ~~Describe \code{volume.cf} here~~
+the volume of the room in cubic feet (cf)
 }
 }
 \details{
@@ -51,17 +53,13 @@ concentration(contaminant.generation.rate, flow.rate.cfm, timeframe, volume.cf)
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
+## concentration(1.4, 2500, 11, 75000)
+## contaminant generation is 1.4 cfm
+## air flow is 2500 cfm
+## 11 minutes is the time interval
+## room is 75,000 cubic feet
+## "Concentration: 171.90 ppm"
 
-## The function is currently defined as
-function (contaminant.generation.rate, flow.rate.cfm, timeframe,
-    volume.cf)
-{
-    a <- exp(-1 * flow.rate.cfm * timeframe/volume.cf)
-    numerator <- contaminant.generation.rate * (1 - a)
-    conc <<- numerator * 1e+06/flow.rate.cfm
   }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

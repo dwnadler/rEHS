@@ -5,7 +5,10 @@
 Calculate Air Velocity in fpm
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Airflow velocity is used to capture contaminants and overcome cross-drafts,
+transportation of contaminants through the duct, and balancing
+of “losses” in the system and in the discharge of the contaminant from the stack.
+This is described as the “magnitude” of the system, which is a function of the velocity pressure.
 }
 \usage{
 velocity.fpm(velocity.pressure.as.h2o)
@@ -13,7 +16,7 @@ velocity.fpm(velocity.pressure.as.h2o)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{velocity.pressure.as.h2o}{
-%%     ~~Describe \code{velocity.pressure.as.h2o} here~~
+pressure in the direction of flow necessary to caus the air at rest to flow at a given velocity
 }
 }
 \details{
@@ -42,15 +45,9 @@ velocity.fpm(velocity.pressure.as.h2o)
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (velocity.pressure.as.h2o)
-{
-    V <<- 4005 * sqrt(velocity.pressure.as.h2o)
-  }
+## ga velocity pressure of 0.2″
+## velocity.fpm(.20)
+## "Velocity is 1791.09 fpm"
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):

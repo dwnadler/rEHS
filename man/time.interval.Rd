@@ -5,7 +5,7 @@
 Calculate Time Interval in Minutes for New Concentration of Contaminant
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+is used to determine the time period for a concentration buildup that will occur
 }
 \usage{
 time.interval(volume.cf, flow.rate.cfm, contaminant.generation.rate.cfm, concentration.ppm)
@@ -13,16 +13,16 @@ time.interval(volume.cf, flow.rate.cfm, contaminant.generation.rate.cfm, concent
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{volume.cf}{
-%%     ~~Describe \code{volume.cf} here~~
+volume of room or enclosure (cubic feet)
 }
   \item{flow.rate.cfm}{
-%%     ~~Describe \code{flow.rate.cfm} here~~
+flow rate of the air (cfm)
 }
   \item{contaminant.generation.rate.cfm}{
-%%     ~~Describe \code{contaminant.generation.rate.cfm} here~~
+rate of generation of contaminant (cfm)
 }
   \item{concentration.ppm}{
-%%     ~~Describe \code{concentration.ppm} here~~
+concentration of the contaminant to predict (ppm)
 }
 }
 \details{
@@ -51,20 +51,12 @@ time.interval(volume.cf, flow.rate.cfm, contaminant.generation.rate.cfm, concent
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
+## time.interval(75000, 2500, 1.4, 175)
+## 75000 is room volume
+## 2500 is air flow rate
+## 1.4 cfm of contaminant generation
+## "Time interval is 11.24 minutes for 175.0 ppm"
 
-## The function is currently defined as
-function (volume.cf, flow.rate.cfm, contaminant.generation.rate.cfm,
-    concentration.ppm)
-{
-    new.concentration <- concentration.ppm/1e+06
-    a <- volume.cf/flow.rate.cfm
-    b <- contaminant.generation.rate.cfm - flow.rate.cfm * new.concentration
-    c <- log(b/contaminant.generation.rate.cfm)
-    delta.t.min <<- -1 * a * c
-  }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):

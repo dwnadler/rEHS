@@ -2,7 +2,7 @@
 \alias{q.cfm}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Calculate cfm
+Calculate air flow
 }
 \description{
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
@@ -13,10 +13,10 @@ q.cfm(air.velocity.fpm, area.sf)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{air.velocity.fpm}{
-%%     ~~Describe \code{air.velocity.fpm} here~~
+velocity of air in feet per minute
 }
   \item{area.sf}{
-%%     ~~Describe \code{area.sf} here~~
+cross-sectional area of air vent
 }
 }
 \details{
@@ -45,15 +45,9 @@ q.cfm(air.velocity.fpm, area.sf)
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (air.velocity.fpm, area.sf)
-{
-    Q <<- air.velocity.fpm * area.sf
-  }
+## q.cfm(5, 2)
+## where air velocity is 5 fpm and vent cross-sectional area is 2 sf
+## "Air flow rate: 10.00 fpm"
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):

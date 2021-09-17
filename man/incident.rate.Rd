@@ -2,21 +2,23 @@
 \alias{incident.rate}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-OSHA Incident Rate Calculator
+OSHA incident rate
 }
 \description{
-OSHA Incident Rate calculator
+a calculation that describes the number of
+recordable incidents that a company experiences per 100 full-time employees
+in any given time frame.
 }
 \usage{
-ir(recordable_cases, total_labor_hours)
+incident.rate(recordable.cases, total.hours.worked)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{recordable_cases}{
-%%     ~~Describe \code{recordable_cases} here~~
+  \item{recordable.cases}{
+all work related deaths, illnesses, and injuries which result in a loss of consciousness, restriction of work or motion, permanent transfer to another job within the company, or that require some type of medical treatment or first-aid.
 }
-  \item{total_labor_hours}{
-%%     ~~Describe \code{total_labor_hours} here~~
+  \item{total.hours.worked}{
+total number of hours employees worked in a reporting period
 }
 }
 \details{
@@ -45,15 +47,10 @@ ir(recordable_cases, total_labor_hours)
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (recordable_cases, total_labor_hours)
-{
-    recordable_cases * 2e+05/total_labor_hours
-  }
+## incident.rate(17, 1500000)
+## represents 17 recordable cases from 1.5 million hours
+## For every 100 employees, 2.27 have been involved in a recordable injury or illness""
+## "Incidence rate: 2.27"
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):

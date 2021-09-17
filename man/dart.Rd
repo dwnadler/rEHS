@@ -2,10 +2,10 @@
 \alias{dart}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-DART Rate (Days Away/Restricted or Job Transfer Rate) Calculator
+Days away/restricted or transfer rate
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+A calculation that describes the number of recordable injuries and illnesses per 100 full-time employees that resulted in days away from work, restricted work activity and/or job transfer that a company has experienced in any given time frame.
 }
 \usage{
 dart(dart.incidents, total.labor.hours)
@@ -13,10 +13,10 @@ dart(dart.incidents, total.labor.hours)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{dart.incidents}{
-%%     ~~Describe \code{dart.incidents} here~~
+number of dart-related incidents as defined above
 }
   \item{total.labor.hours}{
-%%     ~~Describe \code{total.labor.hours} here~~
+total number of hours employees worked in a reporting period
 }
 }
 \details{
@@ -45,15 +45,9 @@ dart(dart.incidents, total.labor.hours)
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (dart.incidents, total.labor.hours)
-{
-    dart.incidents * 2e+05/total.labor.hours
-  }
+## dart(2, 28000)
+## "DART: 14.29"
+## For every 100 employees, 14.29 incidents resulted in lost or restricted days or job transfer due to work related injuries or illnesses.
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):

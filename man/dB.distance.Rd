@@ -2,18 +2,25 @@
 \alias{dB.distance}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Calculating Sound Levels at Various Distances
+Sound level at various distances
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+a function to calculate sound levels taken at one distance
+and extrapolate the sound level at another distance
 }
 \usage{
-dB.distance(x)
+dB.distance(dB0, distance.original, distance.new)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{
-%%     ~~Describe \code{x} here~~
+  \item{dB0}{
+the original sound measurement (dB)
+}
+  \item{distance.original}{
+the original distance where noise measurement was taken
+}
+  \item{distance.new}{
+the second distance to calculate the sound level reading
 }
 }
 \details{
@@ -42,14 +49,10 @@ dB.distance(x)
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (x)
-{
-  }
+## dB.distance(92, 4, 10)
+## "Noise level in dB at distance 10.00 is 84.04"
+## Sound level is 92 dB at 4 feet from a source. At 10 feet from source, sound
+## level is measured as 84.04 dB.
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):
