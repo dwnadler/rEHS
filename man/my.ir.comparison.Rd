@@ -1,22 +1,23 @@
-\name{mgm3.to.ppm}
-\alias{mgm3.to.ppm}
+\name{my.ir.comparison}
+\alias{my.ir.comparison}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Convert mg/m3 to ppm
+Comparing an incident rate to an industry incident rate
 }
 \description{
-Converts a concentration in milligrams per cubic meter --> parts per million
+This function returns TRUE if your incident rate (my.ir) is lower than the
+industry incident rate for your NAICS (my.industry)
 }
 \usage{
-mgm3.to.ppm(mg.per.cubic.meter, molecular.weight)
+my.ir.comparison(my.ir, my.naics.code)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{mg.per.cubic.meter}{
-milligrams per cubic meter
+  \item{my.ir}{
+input your OSHA-recordable incident rate
 }
-  \item{molecular.weight}{
-molecular weight
+  \item{my.naics.code}{
+input your industry's NAICS number
 }
 }
 \details{
@@ -45,13 +46,18 @@ molecular weight
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-## Using acrylamide
-## mgm3.to.ppm(10 ,78)
-## concentration of acyrlamide is 10 mg/m3
-## molecular weight of acrylamide is 78 grams/mol
-## "mg/m3: 9.99"
-  }
-
+## incident rate = 2.7
+## industry is dairy product manufacturing (3115)
+## my.ir.comparison(2.7, 3115)
+## # A tibble: 1 × 3
+  Industry                    NAICS    IR
+   0s<chr>                       <dbl> <dbl>
+1 Dairy product manufacturing  3115   4.3
+## NAICS industry has a 4.3 incident rate
+       IR
+[1,] TRUE
+## you have a lower incident rate than the industry as a whole
+}
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):
 % \keyword{ ~kwd1 }

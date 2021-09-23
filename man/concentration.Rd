@@ -61,7 +61,7 @@ the volume of the room in cubic feet (cf)
 ## "Concentration: 171.90 ppm"
 
   }
-}
+
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):
 % \keyword{ ~kwd1 }

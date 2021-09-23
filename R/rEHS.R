@@ -1,10 +1,15 @@
 # Environmental Health and Safety package for R
 # Work-in-progress
 #
-#
-#
+library(tidyr)
+library(readr)
+# import naics data table
+# convert naics codes to numeric
+# then remove na data
+
 # clear console:
 cat("\014")
+
 
 # Injury rates ---------------------------------------------------------------
 # Incident Rate (ir) as specified by OSHA
@@ -35,9 +40,6 @@ severity.rate <- function(total.days.lost, total.recordable.incidents) {
   sr <<- total.days.lost / total.recordable.incidents
   sprintf("Severity rate: %.2f", sr)
 }
-
-
-
 
 
 # Noise exposure ------------------------------------------------------------
@@ -177,7 +179,7 @@ LI <<- object.weight / weight.limit
 sprintf("Weight limit: %.2f and lifting index: %.2f", weight.limit, LI)
 } # end of function RWL
 
-#
+
 # Particulates and Gases ---------------------------------------------------
 # converting mg/m3 to and from ppm
 #' @export mgm3.to.ppm
@@ -193,6 +195,7 @@ ppm.to.mgm3 <- function(ppm, molecular.weight){
 
 }
 
+
 # minimum air sampling volume
 # Limit of quantification is the concentration level above which
 # quantitative results may be obtained with a certain degree of confidence
@@ -206,6 +209,7 @@ min.air.volume <- function(
     limit.of.quantification.mg / contaminant.target.concentration.mgm3
   sprintf("Minimum air volume required: %.4f liters", volume.minimum)
 }
+
 
 # Ventilation ---------------------------------------------------------------
 #' @export q.cfm
@@ -243,8 +247,24 @@ concentration <- function(contaminant.generation.rate, flow.rate.cfm,
 }
 
 
+# input/output --------------
 
-cat("\014")
+#' @export my.ir.comparison # can i add the ir var to this function??? --------
+my.ir.comparison <- function(my.ir, my.naics.code) {
+  naics <- read_delim("naics.txt", delim = "\t", show_col_types = FALSE,
+                       escape_double = FALSE, trim_ws = TRUE)
+  #naics <<- subset(naics, select = -c(X:X.3))
+  naics$NAICS <- suppressWarnings(as.numeric(naics$NAICS))
+  naics <- drop_na(naics)
+  # take in my.ir
+  # find my.naics.code
+  my.industry <- which(naics$NAICS == my.naics.code)
+  # find the row in df
+  industry.ir <- naics[my.industry,3]
+  print(naics[my.industry,])
+  my.ir < industry.ir
+}
 
 
 
+#cat("\014")
