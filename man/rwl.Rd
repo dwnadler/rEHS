@@ -81,7 +81,7 @@ weight of the object in kilograms (kg)
 ## >3.01: very high risk
 
 ## weight.limit interpretation:
-## the acceptalbe maximum weight (kg) that is safe under the
+## the acceptable maximum weight (kg) that is safe under the
 ## horizontal, vertical, and distance data input in the rwl() function,
 ## including the angle, seconds between lifts, and grasp.
 }

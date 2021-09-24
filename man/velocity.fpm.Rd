@@ -45,7 +45,7 @@ pressure in the direction of flow necessary to caus the air at rest to flow at a
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-## ga velocity pressure of 0.2″
+## velocity pressure of 0.2″
 ## velocity.fpm(.20)
 ## "Velocity is 1791.09 fpm"
 }

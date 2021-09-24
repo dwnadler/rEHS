@@ -202,7 +202,7 @@ ppm.to.mgm3 <- function(ppm, molecular.weight){
 # min.air.volume provides liters
 # limit.of.quantification.mg as milligrams
 # contaminant.target.concentration in mg/m3
- #' @export min.air.volume
+#' @export min.air.volume
 min.air.volume <- function(
   limit.of.quantification.mg, contaminant.target.concentration.mgm3) {
   volume.minimum <<- 1000 *
